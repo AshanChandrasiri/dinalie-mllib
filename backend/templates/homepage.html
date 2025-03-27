@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Genre Prediction</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <!-- Title Bar -->
+    <div class="title-bar">
+        <h1>🎵 Genre Predictor 🎶</h1>
+    </div>
+
+    <div class="container">
+        <p>Enter the lyrics of a song below, and let the model predict its genre:</p>
+
+        <!-- Lyrics input and model selection -->
+        <textarea id="lyricsInput" placeholder="Paste or type the song lyrics here..." rows="10" cols="50"></textarea>
+
+        <div class="model-selection">
+            <label for="modelSelect">Select Model:</label>
+            <select id="modelSelect">
+                <option value="logistic-regression">Logistic Regression</option>
+                <option value="random-forest">Random Forest</option>
+            </select>
+        </div>
+
+        <button id="predictButton" class="animated-button">Predict Genre</button>
+
+        <!-- Result Container with animation -->
+        <div id="resultContainer" class="hidden result-container">
+            <h3>Predicted Genre:</h3>
+            <p id="predictedGenre"></p>
+
+            <h3>Prediction Details:</h3>
+            <div id="predictionDetails"></div>
+
+            <h3>Charts:</h3>
+            <div>
+                <h4>Bar Chart</h4>
+                <img id="barChart" class="responsive-chart" src="" alt="Bar Chart">
+            </div>
+            <div>
+                <h4>Pie Chart</h4>
+                <img id="pieChart" class="responsive-chart" src="" alt="Pie Chart">
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
